@@ -49,6 +49,7 @@ git clone https://github.com/lucianoratamero/django-heroku-bootstrap.git
 mv django-heroku-bootstrap YOUR_PROJECT_NAME
 virtualenv YOUR_PROJECT_NAME
 cd YOUR_PROJECT_NAME
+echo export DJANGO_SETTINGS_MODULE=settings.dev >> bin/postactivate
 source bin/activate
 pip install -r requirements.txt
 ```
