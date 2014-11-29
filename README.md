@@ -6,19 +6,20 @@ django-heroku-bootstrap is a base project that integrates django with heroku and
 
 since we use heroku and less, we ust install some packages for your project to work.
 
-- npm
+- virtualenv
+- postgresql (to heroku)
+- python-dev
 - nodejs > 0.8
 - lessc
 - promise
 - yuglify
 - heroku-toolbelt
-- virtualenv
 
 be sure to have everything installed. if you're using ubuntu 14.04, you need to install a PPA to fully use the less compiler and create a symlink binding nodejs to node:
 
 ```
 curl -sL https://deb.nodesource.com/setup | sudo bash -
-sudo apt-get install -y nodejs npm
+sudo apt-get install -y nodejs
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 ```
 
@@ -91,6 +92,12 @@ if you wish to change your app name, just use:
 
 ```
 heroku apps:rename newname
+```
+
+and to setup heroku's database:
+
+```
+heroku run python manage.py syncdb
 ```
 
 and start developing!
