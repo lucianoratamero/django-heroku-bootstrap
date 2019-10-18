@@ -1,4 +1,4 @@
-Django==1.6.8
+Django==1.11.23
 bootstrap-admin==0.3.2
 dj-database-url==0.3.0
 dj-static==0.0.6
